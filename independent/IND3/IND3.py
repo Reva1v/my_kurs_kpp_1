@@ -13,7 +13,6 @@ class Employee:
         bonus = (base_salary / 100) * self._bonus_percent
         return bonus
 
-    # Getters and setters for encapsulated attributes
     def get_name(self):
         return self._name
 
@@ -40,7 +39,7 @@ class Employee:
 
 
 class Manager(Employee):
-    bonus_amount = 100  # class variable for all managers, cannot be modified per instance
+    bonus_amount = 100
 
     def __init__(self, name, salary, days_worked, subordinates_count, bonus_percent=0):
         super().__init__(name, salary, days_worked, bonus_percent)
@@ -54,7 +53,6 @@ class Manager(Employee):
         bonus = base_bonus + (self._subordinates_count * Manager.bonus_amount)
         return bonus
 
-    # Getter and setter for subordinates count
     def get_subordinates_count(self):
         return self._subordinates_count
 
