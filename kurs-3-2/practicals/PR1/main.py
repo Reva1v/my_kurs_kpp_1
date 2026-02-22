@@ -1,31 +1,9 @@
 import cv2
-import numpy as np
 import matplotlib.pyplot as plt
 import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 IMAGE_PATH = os.path.join(BASE_DIR, 'test_image.png')
-
-# if not os.path.exists(IMAGE_PATH):
-#     h, w = 400, 600
-#     canvas = np.zeros((h, w, 3), dtype=np.uint8)
-#
-#     # Градієнтний фон (numpy broadcasting — без циклів)
-#     canvas[:, :, 0] = np.linspace(0, 255, w, dtype=np.uint8)[np.newaxis, :]   # Blue
-#     canvas[:, :, 1] = np.linspace(0, 255, h, dtype=np.uint8)[:, np.newaxis]   # Green
-#     canvas[:, :, 2] = 128                                                       # Red
-#
-#     # Геометричні фігури для наочності
-#     cv2.circle(canvas, (150, 200), 100, (255, 255, 255), -1)
-#     cv2.circle(canvas, (150, 200), 75,  (30,  100, 220), -1)
-#     cv2.rectangle(canvas, (300, 80), (560, 320), (20, 180, 80), -1)
-#     cv2.rectangle(canvas, (320, 100), (540, 300), (200, 230, 50), 4)
-#     cv2.putText(canvas, 'Test Image PR1', (130, 380),
-#                 cv2.FONT_HERSHEY_SIMPLEX, 1.0, (255, 255, 255), 2)
-#
-#     cv2.imwrite(IMAGE_PATH, canvas)
-#     print(f'Тестове зображення створено: {IMAGE_PATH}\n')
-
 
 image = cv2.imread(IMAGE_PATH, cv2.IMREAD_UNCHANGED)
 
